@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMasterNavwithHero.master.cs" Inherits="MasterPage_UserMasterNavwithHero" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/elegant-icons.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/nice-select.css" rel="stylesheet" type="text/css" />
+    <link href="../css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/slicknav.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+    
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+
+
+      
+
+
+        <%--header--%>
+
+
+        <div class="header">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="header__logo">
+                            <a href="Home.aspx">
+                                <img src="../img/stationero-logo.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" style="padding-left: 100px">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active"><a href="Home.aspx">Home</a></li>
+
+                                <li ><a href="Product.aspx">Shop</a></li>
+
+                                <li><a href="NewCustomer.aspx">Register</a></li>
+                                <li><a href="ProductReport.aspx">ProductList</a></li>
+                                <li><a href="OrderList.aspx">
+                                    <asp:ImageButton ID="btnMessage" runat="server" ImageUrl="~/Images/shad.ico" Height="13px" Visible="false" />Order List
+                                </a>
+                                </li>
+                                <%-- <li><a href="#">Pages</a>
+                                        <ul class="header__menu__dropdown">
+                                            <li><a href="./shop-details.html">Shop Details</a></li>
+                                            <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+
+                                        </ul>
+                                    </li>--%>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="header__cart">
+                            <ul>
+
+                                <li><a href="ShoppingCart.aspx"><i class="fa fa-shopping-cart fa-2xl" style="font-size: 30px;"></i>
+                                 <asp:Label ID="txtcart" runat="server" Text="0"></asp:Label>    
+                                </a></li>
+                            </ul>
+                            <div class="header__top__right__auth">
+                               
+
+                                   <asp:Label ID="showlogin" runat="server" Text="Label" Visible="false">
+                                         <a href="Login.aspx" style="font-size: 16px;" visible="false"><i class="fa fa-user" style="font-size: 30px;"></i>Login</a>
+
+                                    </asp:Label>
+
+                                     <asp:Label ID="showlogout" runat="server" Text="Label" Visible="false">
+                                         <a href="Logout.aspx" style="font-size: 16px;" visible="false"><i class="fa fa-sign-out" style="font-size: 30px;"></i>Logout</a>
+
+                                    </asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="humberger__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <%--hero--%>
+
+          <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+       
+
+
+
+        <%--carosal--%>
+
+        <section class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="categories__slider owl-carousel">
+
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/ballpen/ballpencategory.jpg">
+                                <h5><a href="Product.aspx">Ball Pen</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/correction/correction-pen.jpg">
+                                <h5><a href="Product.aspx">Correction Pen</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/pencil/pencil-category.jpg">
+                                <h5><a href="#">Pencil</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/ruler/rulercategory.jpg">
+                                <h5><a href="Product.aspx">Ruler</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/bookcategory.jpg">
+                                <h5><a href="Product.aspx">Book</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer class="footer" style="padding-top: 0px">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer__copyright">
+                            <div class="footer__copyright__text">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                    All rights reserved | Copy Design from internet <i class="fa fa-heart" aria-hidden="true"></i>by Sai Thet Naung Oo
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    </form>
+
+
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+    <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script src="../js/jquery.nice-select.min.js" type="text/javascript"></script>
+
+    <script src="../js/jquery.slicknav.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/mixitup.min.js"></script>
+    <script src="../js/owl.carousel.min.js" type="text/javascript"></script>
+
+
+    <script src="../js/main.js" type="text/javascript"></script>
+
+
+</body>
+</html>
